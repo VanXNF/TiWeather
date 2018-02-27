@@ -23,7 +23,7 @@
 
             <include layout="@layout/forecast" />
 
-            <include layout="@layout/aqi" />
+            <include layout="@layout/air" />
 
             <include layout="@layout/suggestion" />
 

@@ -9,16 +9,49 @@ import com.google.gson.annotations.SerializedName;
 
 public class Now {
 
-    @SerializedName("tmp")
-    public String temperature;
+    //云量
+    public String cloud;
 
-    @SerializedName("cond")
-    public More more;
+    //天气状况代码
+    @SerializedName("cond_code")
+    public String condCode;
 
-    public class More {
+    //天气状况代码
+    @SerializedName("cond_txt")
+    public String condText;
 
-        @SerializedName("txt")
-        public String info;
+    //体感温度，默认单位：摄氏度
+    public String fl;
 
-    }
+    //相对湿度
+    public String hum;
+
+    //降水量
+    public String pcpn;
+
+    //大气压强
+    public String pres;
+
+    //温度，默认单位：摄氏度
+    public String tmp;
+
+    //能见度，单位：公里
+    public String vis;
+
+    //风向360角度
+    @SerializedName("wind_deg")
+    public String windDeg;
+
+    //风向
+    @SerializedName("wind_dir")
+    public String windDir;
+
+    //风力
+    @SerializedName("wind_sc")
+    public String windSc;
+
+    //风速，公里/小时
+    @SerializedName("wind_spd")
+    public String windSpd;
+
 }

@@ -9,18 +9,32 @@ import com.google.gson.annotations.SerializedName;
 
 public class Basic {
 
-    @SerializedName("city")
-    public String cityName;
-
-    @SerializedName("id")
+    //地区／城市ID
+    @SerializedName("cid")
     public String weatherId;
 
-    public Update update;
+    //地区／城市名称
+    @SerializedName("location")
+    public String cityName;
 
-    public class Update {
+    //该地区／城市的上级城市
+    @SerializedName("parent_city")
+    public String parentCity;
 
-        @SerializedName("loc")
-        public String updateTime;
+    //该地区／城市所属行政区域
+    @SerializedName("admin_area")
+    public String adminArea;
 
-    }
+    //该地区／城市所属国家名称
+    public String cnty;
+
+    //经度
+    public String lat;
+
+    //纬度
+    public String lon;
+
+    //时区
+    public String tz;
+
 }
