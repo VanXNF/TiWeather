@@ -7,6 +7,7 @@ import org.litepal.LitePal;
 
 /**
  * Created by VanXN on 2018/2/26.
+ * 用于全局获取Context
  */
 
 public class MyApplication extends Application {
