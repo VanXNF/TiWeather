@@ -1,5 +1,6 @@
 package com.example.vanxnf.tiweather;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
@@ -24,6 +25,7 @@ import com.bumptech.glide.Glide;
 import com.example.vanxnf.tiweather.gson.Forecast;
 import com.example.vanxnf.tiweather.gson.Lifestyle;
 import com.example.vanxnf.tiweather.gson.Weather;
+import com.example.vanxnf.tiweather.service.AutoUpdateService;
 import com.example.vanxnf.tiweather.util.HttpUtil;
 import com.example.vanxnf.tiweather.util.Utility;
 
@@ -231,5 +233,7 @@ public class WeatherActivity extends AppCompatActivity {
             forecastLayout.addView(view);
         }
         weatherLayout.setVisibility(View.VISIBLE);
+        Intent intent = new Intent(this, AutoUpdateService.class);
+        startService(intent);
     }
 }
